@@ -93,7 +93,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   return 'Username or email are requested';
                 }
               },
-              decoration: const InputDecoration(labelText: "Username or email"),
+              decoration: const InputDecoration(
+                labelText: "Username or email",
+                labelStyle: TextStyle(color: DaznCP.loginGray),
+              ),
             ),
             const SizedBox(height: 27),
             TextFormField(
@@ -111,6 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               decoration: InputDecoration(
                 labelText: "Password",
+                labelStyle: const TextStyle(color: DaznCP.loginGray),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _passwordVisible ? Icons.visibility : Icons.visibility_off,
