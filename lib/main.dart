@@ -1,9 +1,8 @@
 import 'package:daznfun_app_draft/apptheme.dart';
-import 'package:daznfun_app_draft/login_page.dart';
+import 'package:daznfun_app_draft/routes/home_route.dart';
+import 'package:daznfun_app_draft/routes/login_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'DAZN FUN',
       theme: DaznTheme.theme(),
-      home: _isSigned ? const MyHomePage() : const LoginPage(),
+      home: _isSigned ? const HomeRoute() : const LoginScreen(),
     );
   }
 }

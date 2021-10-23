@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /* DAZN Color Pattern */
 class DaznCP {
@@ -7,6 +6,7 @@ class DaznCP {
   static const Color loginGray = Color(0xFF666C71);
   static const Color accent = Color(0xFFf7ff1a);
   static const Color secondary = Color(0xFF0c161c);
+  static const Color mainBackground = Color(0xFF081014);
 }
 
 class DaznTheme {
@@ -51,14 +51,14 @@ class DaznTheme {
 
   static ThemeData theme() {
     return ThemeData(
-      brightness: Brightness.dark,
       appBarTheme: AppBarTheme(
         foregroundColor: Colors.white,
         backgroundColor: Colors.grey[900],
       ),
+      scaffoldBackgroundColor: DaznCP.mainBackground,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.green,
+        foregroundColor: Colors.black,
+        backgroundColor: DaznCP.accent,
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedItemColor: Colors.green,
