@@ -1,4 +1,3 @@
-import 'package:daznfun_app_draft/apptheme.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -7,21 +6,14 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          stops: [
-            0.1,
-            1,
-          ],
-          colors: [
-            DaznCP.accent,
-            DaznCP.mainBackground,
-          ],
+        image: DecorationImage(
+          alignment: Alignment.bottomLeft,
+          scale: 5,
+          image: AssetImage('assets/images/logo_claim.png'),
         ),
       ),
+      height: 150,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Row(
@@ -31,7 +23,7 @@ class Header extends StatelessWidget {
             Icon(
               Icons.account_circle_outlined,
               color: Colors.white,
-              size: 30,
+              size: 35,
             ),
           ],
         ),

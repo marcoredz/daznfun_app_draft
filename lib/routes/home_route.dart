@@ -1,3 +1,4 @@
+import 'package:daznfun_app_draft/apptheme.dart';
 import 'package:daznfun_app_draft/widgets/header.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,9 +14,18 @@ class _HomeRouteState extends State<HomeRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: RadialGradient(
+              center: Alignment.topLeft,
+              radius: 1.5,
+              colors: [DaznCP.accent, DaznCP.mainBackground],
+              stops: [0.3, 1]),
+        ),
         child: Column(
-          children: const [Header()],
+          children: const [
+            Header(),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
