@@ -4,33 +4,21 @@ import 'package:daznfun_app_draft/routes/login_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  runApp(MyApp(isSigned: prefs.getBool('issigned') ?? false));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  bool _isSigned = false;
-
-  @override
-  void initState() {
-    Future<SharedPreferences> prefs = SharedPreferences.getInstance();
-    prefs.then((value) => setState(() => _isSigned = value.getBool('issigned') ?? false));
-    super.initState();
-  }
-
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key, this.isSigned = false}) : super(key: key);
+  final bool isSigned;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DAZN FUN',
       theme: DaznTheme.theme(),
-      home: _isSigned ? const HomeRoute() : const LoginScreen(),
+      home: isSigned ? const HomeRoute() : const LoginScreen(),
     );
   }
 }

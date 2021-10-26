@@ -7,6 +7,10 @@ class DaznCP {
   static const Color accent = Color(0xFFf7ff1a);
   static const Color secondary = Color(0xFF0c161c);
   static const Color mainBackground = Color(0xFF081014);
+  static const Color sectionBackground = Color(0xFF242D34);
+  static const Color green = Color(0xFF14854D);
+  static const Color red = Color(0xFFF44336);
+  static const Color gray = Color(0xFF37474F);
 }
 
 class DaznTheme {
@@ -21,7 +25,7 @@ class DaznTheme {
       fontFamily: 'DaznTrim',
       fontSize: 14.0,
       fontWeight: FontWeight.w400,
-      color: Colors.white,
+      color: Color(0xFF83817F),
     ),
     headline1: TextStyle(
       fontFamily: 'DaznTrim',
