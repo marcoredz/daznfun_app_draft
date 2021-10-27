@@ -17,25 +17,29 @@ class OpenPredictions extends StatelessWidget {
             title: "PRONOSTICI APERTI",
           ),
           const SizedBox(height: 10),
-          // ListView.builder(
-          //   itemCount: items.length,
-          //   scrollDirection: Axis.horizontal,
-          //   itemBuilder: (context, index) {
-          //     return PredictionCard(
-          //       title: items[index],
-          //     );
-          //   },
-          // ),
-          Row(
-            children: const [
-              PredictionCard(
-                title: "Serie A",
-              ),
-              PredictionCard(
-                title: "LaLiga",
-              )
-            ],
-          )
+          SizedBox(
+            height: 110,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: items.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return PredictionCard(
+                  title: items[index],
+                );
+              },
+            ),
+          ),
+          // Row(
+          //   children: const [
+          //     PredictionCard(
+          //       title: "Serie A",
+          //     ),
+          //     PredictionCard(
+          //       title: "LaLiga",
+          //     )
+          //   ],
+          // )
         ],
       ),
     );

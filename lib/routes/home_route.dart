@@ -28,9 +28,11 @@ class _HomeRouteState extends State<HomeRoute> {
           children: const [
             Header(),
             SizedBox(height: 10),
-            OpenPredictions(
-                //items: ["Serie A", "LaLiga"],
-                ),
+            Flexible(
+              child: OpenPredictions(
+                items: ["Serie A", "LaLiga", "Premier League", "Eredivise"],
+              ),
+            ),
           ],
         ),
       ),
