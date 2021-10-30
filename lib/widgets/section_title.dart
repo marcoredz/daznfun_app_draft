@@ -11,18 +11,11 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = DaznTheme.theme();
-    return SizedBox(
-      child: Container(
-        decoration: const BoxDecoration(
-          color: DaznCP.secondary, //Colors.black.withOpacity(0.5)
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            title,
-            style: theme.textTheme.headline2,
-          ),
-        ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        title,
+        style: theme.textTheme.headline2,
       ),
     );
   }

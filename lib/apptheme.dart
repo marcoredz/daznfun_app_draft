@@ -5,8 +5,8 @@ class DaznCP {
   static const Color loginBgColor = Color(0xFF242d34);
   static const Color loginGray = Color(0xFF666C71);
   static const Color accent = Color(0xFFf7ff1a);
-  static const Color secondary = Color(0xFF0c161c);
-  static const Color mainBackground = Color(0xFF081014);
+  static const Color secondaryBtnColor = Color(0xFF0c161c);
+  static const Color mainBackground = Color(0xFF06070D); //#06070D
   static const Color sectionBackground = Color(0xFF242D34);
   static const Color green = Color(0xFF14854D);
   static const Color red = Color(0xFFF44336);

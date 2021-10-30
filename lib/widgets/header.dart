@@ -1,3 +1,4 @@
+import 'package:daznfun_app_draft/apptheme.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -7,6 +8,12 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+        gradient: RadialGradient(
+          center: Alignment.topLeft,
+          radius: 2,
+          colors: [DaznCP.accent, DaznCP.secondaryBtnColor],
+          stops: [0.5, 1],
+        ),
         image: DecorationImage(
           alignment: Alignment.bottomLeft,
           scale: 5,

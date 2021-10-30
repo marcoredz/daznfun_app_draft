@@ -61,7 +61,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(DaznCP.secondary),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(DaznCP.secondaryBtnColor),
                             foregroundColor: MaterialStateProperty.all<Color>(Colors.white)),
                         child: const Text(
                           "Sign up",
