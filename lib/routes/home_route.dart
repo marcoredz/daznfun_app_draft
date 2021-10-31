@@ -28,7 +28,6 @@ class _HomeRouteState extends State<HomeRoute> {
             future: mockPredictionsService.getOpenPredictions(),
             builder: (context, AsyncSnapshot<List<Prediction>> snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                // final predictions = snapshot.data ?? [];
                 return OpenPredictions(
                   items: snapshot.data ?? [],
                 );

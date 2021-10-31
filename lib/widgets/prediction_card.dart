@@ -22,9 +22,24 @@ class PredictionCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              data.title,
-              style: theme.textTheme.bodyText1,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //Expanded to prevent render pixel overflow
+                Expanded(
+                  child: Text(
+                    data.title,
+                    style: theme.textTheme.bodyText1,
+                    overflow: TextOverflow.fade,
+                    softWrap: false,
+                  ),
+                ),
+                Icon(
+                  Icons.star,
+                  color: data.jollyColor,
+                  size: 20,
+                )
+              ],
             ),
             const SizedBox(height: 5),
             Text(
