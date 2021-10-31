@@ -1,0 +1,41 @@
+
+{
+  "open_predictions": [
+    {
+      "id": "pre1",
+      "title": "Serie A",
+      "description": "10° giornata",
+      "nTaken": 5,
+      "nMissed": 1,
+      "nWaiting": 2,
+      "jolly": 0
+    },
+    {
+      "id": "pre2",
+      "title": "LaLiga",
+      "description": "9° giornata",
+      "nTaken": 3,
+      "nMissed": 2,
+      "nWaiting": 3,
+      "jolly": 2
+    },
+    {
+      "id": "pre3",
+      "title": "Premier League",
+      "description": "11° giornata",
+      "nTaken": 6,
+      "nMissed": 1,
+      "nWaiting": 1,
+      "jolly": 2
+    },
+    {
+      "id": "pre4",
+      "title": "Ligue 1",
+      "description": "10° giornata",
+      "nTaken": 3,
+      "nMissed": 5,
+      "nWaiting": 0,
+      "jolly": 1
+    }
+  ]
+}

@@ -12,7 +12,7 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = DaznTheme.theme();
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Text(
         title,
         style: theme.textTheme.headline2,
